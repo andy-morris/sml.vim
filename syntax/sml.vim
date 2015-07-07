@@ -145,7 +145,7 @@ syn keyword smlDecl functor nextgroup=smlFunctid skipwhite skipempty
 syn match smlFunctid "\a\k*\|[!%&$#+\-/:<=>?@\\~`^|*]\+" contained
   \ nextgroup=smlFunctArg skipwhite skipempty
 hi def link smlFunctid smlStrid
-syn region smlFunctArg matchgroup=smlDelim start="(" end=")" contains=smlFunctArgSimple,smlDecl contained nextgroup=smlFunctArg,smlModPunc
+syn region smlFunctArg matchgroup=smlDelim start="(" end=")" contains=smlFunctArgSimple,smlDecl contained nextgroup=smlFunctArg,smlModPunc skipwhite skipnl skipempty
 syn match smlFunctArgSimple
   \ "\((\s*\)\@<=\a\k*\|[!%&$#+\-/:<=>?@\\~`^|*]\+\(\s*:\)\@=" contained
   \ nextgroup=smlModPunc
