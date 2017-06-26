@@ -151,7 +151,7 @@ syn match smlFunctArgSimple
   \ nextgroup=smlModPunc
 hi def link smlFunctArgSimple smlStrid
 
-syn region smlFunctApp matchgroup=smlDelim start="(\*\@!" end="\*\@<!)" contains=smlFunctAppSimple,smlFunctApp contains=TOP contained
+syn region smlFunctApp matchgroup=smlDelim start="(\*\@!" end="\*\@<!)" contains=smlFunctAppSimple,smlFunctApp transparent contained
 syn match smlFunctAppSimple
   \ "\((\s*\)\@<=\(struct\|sig\)\@!\&\(\a\k*\|[!%&$#+\-/:<=>?@\\~`^|*]\+\)\(\s*)\)\@="
   \ contained
@@ -161,9 +161,9 @@ syn match smlModPunc "[!%&$#+\-/:<=>?@\\~`^|*]\@<!\(:\|=\|:>\)[!%&$#+\-/:<=>?@\\
   \ nextgroup=smlStridBare skipwhite skipempty contained
 hi def link smlModPunc smlPunc
 
-syn region smlParen matchgroup=smlDelim start='(\*\@!' end='\*\@<!)' contains=TOP
-syn region smlList matchgroup=smlDelim start='\[' end=']' contains=TOP
-syn region smlRecord matchgroup=smlDelim start='{' end='}' contains=TOP
+syn region smlParen matchgroup=smlDelim start='(\*\@!' end='\*\@<!)' transparent
+syn region smlList matchgroup=smlDelim start='\[' end=']' transparent
+syn region smlRecord matchgroup=smlDelim start='{' end='}' transparent
 hi def link smlDelim Delimiter
 
 syn match smlDot "\."
